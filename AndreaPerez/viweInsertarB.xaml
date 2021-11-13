@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndreaPerez.viweInsertarB"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ventana de ingreso" FontSize="Medium" />
+            <Entry x:Name="txtCodigo" Placeholder="Ingrese el codigo" Keyboard="Numeric"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingrese el apellido"/>
+            <Entry x:Name="txtEdad" Placeholder="ingrese la edad" Keyboard="Numeric"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Button x:Name="btningresar" Text="Ingresar" Clicked="btningresar_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="btnregresar" Text="Regresar" Clicked="btnregresar_Clicked" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
