@@ -6,20 +6,48 @@
     <StackLayout>        
         <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center"/>
         <Label x:Name="texto" Text=""/>
-        
-        <ListView x:Name="MyListView">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="CODIGO" Grid.Column="0"/>
+            <Label Text="NOMBRE" Grid.Column="1"/>
+            <Label Text="APELLIDO" Grid.Column="2"/>
+            <Label Text="EDAD" Grid.Column="3"/>
+        </Grid>
+
+        <ListView x:Name="MyListView" SelectedItem="{Binding codigo}" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Label x:Name="lblNombre" Text="{Binding nombre}"></Label>
-                            <Label x:Name="lblApellido" Text="{Binding apellido}"></Label>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="55"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblCodigo" Text="{Binding codigo}" Grid.Column="0"></Label>
+                                <Label x:Name="lblNombre" Text="{Binding nombre}" Grid.Column="1"></Label>
+                                <Label x:Name="lblApellido" Text="{Binding apellido}" Grid.Column="2"></Label>
+                                <Label x:Name="lblEdad" Text="{Binding edad}" Grid.Column="3"></Label>
+                            </Grid>
+                            
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+        
         <Button Text="Insertar" x:Name="btnGet" Clicked="btnGet_Clicked"></Button>
         <Button Text="Actualizar" x:Name="btnPost" Clicked="btnPost_Clicked"></Button>
         <Button Text="Eliminar" x:Name="btnDelete" Clicked="btnDelete_Clicked" ></Button>

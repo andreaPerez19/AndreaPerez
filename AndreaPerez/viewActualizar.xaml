@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndreaPerez.viewActualizar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Actualizacion de Datos" FontSize="Medium" />  
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Codigo" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtCodigo" IsReadOnly="True" Grid.Row="0" Grid.Column="1"/>
+                
+                <Label Text="Nombre" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="1"/>
+                
+                <Label Text="Apellido" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtApellido" Grid.Row="2" Grid.Column="1"/>
+                
+                <Label Text="Edad" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtEdad" Keyboard="Numeric" Grid.Row="3" Grid.Column="1"/>
+               
+                <Button x:Name="btningresar" Text="Actualizar" Clicked="btnactualizar_Clicked" Grid.Row="4" Grid.Column="0"/>
+                <Button x:Name="btnregresar" Text="Regresar" Clicked="btnregresar_Clicked" Grid.Row="4" Grid.Column="1"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
